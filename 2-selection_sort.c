@@ -11,7 +11,7 @@ void swap_array(int *array, size_t size, int a, int b)
 {
 	int temp = array[a];
 
-        array[a] = array[b];
+	array[a] = array[b];
 	array[b] = temp;
 	print_array(array, size);
 }
@@ -20,7 +20,7 @@ void swap_array(int *array, size_t size, int a, int b)
  * selection_sort - Sorts an array using the Selection Sort algorithm
  * @array: The array to sort
  * @size: The size of the array
- *     */
+ */
 void selection_sort(int *array, size_t size)
 {
 	int min, index, counterIndex;
