@@ -1,54 +1,39 @@
 #include "sort.h"
+
 /**
- * bubble_sort - Sorts an array of integers in ascending order using
- *               the Bubble Sort algorithm.
- * @array: The array to be sorted.
- * @size: The number of elements in the array.
+ * bubble_sort -Sorts with Bubble Sort
+ * @array:Array to sort
+ * @size: size of array
  */
 void bubble_sort(int *array, size_t size)
 {
-	size_t i, j;
-	int temp;
-	int swapped;
+	size_t index, counterIndex;
 
-	if (!array || size < 2)
-	return;
-
-	for (i = 0; i < size - 1; i++)
+	for (counterIndex = 1; counterIndex != 0;)
 	{
-		swapped = 0;
-		for (j = 0; j < size - i - 1; j++)
+		for (index = 0, counterIndex = 0; index < size - 1; index++)
 		{
-			if (array[j] > array[j + 1])
+			if (array[index] > array[index + 1])
 			{
-				temp = array[j];
-				array[j] = array[j + 1];
-				array[j + 1] = temp;
-				swapped = 1;
-				print_array(array, size);
+																									swap_array(array, size, index, index + 1);
+				counterIndex++;
 			}
 		}
-		if (!swapped)
-		break;
-
 	}
 }
+
 /**
- * print_array - Prints the elements of an integer array.
- * @array: The array to print.
- * @size: The number of elements in the array.
+ * swap_array - common function to swap two array elements
+ * @array: Array to manipulate
+ * @s: Size of array
+ * @a: index of first element
+ * @b: index of second element
  */
-void print_array(const int *array, size_t size)
+void swap_array(int *array, size_t s, int a, int b)
 {
-	size_t i;
+	int t = array[a];
 
-	for (i = 0; i < size; i++)
-	{
-		printf("%d", array[i]);
-
-		if (i < size - 1)
-		printf(", ");
-	}
-
-	printf("\n");
+	array[a] = array[b];
+	array[b] = t;
+	print_array(array, s);
 }
