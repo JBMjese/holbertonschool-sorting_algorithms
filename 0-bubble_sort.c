@@ -29,11 +29,11 @@ void bubble_sort(int *array, size_t size)
  * @a: index of first element
  * @b: index of second element
  */
-void swap_array(int *array, size_t s, int a, int b)
+void swap_array(int *array, size_t size, int a, int b)
 {
 	int t = array[a];
 
 	array[a] = array[b];
 	array[b] = t;
-	print_array(array, s);
+	print_array(array, size);
 }

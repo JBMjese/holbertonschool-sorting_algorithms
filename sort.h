@@ -30,7 +30,6 @@ void quick_sort_r(int *, size_t, int *, size_t);
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 
-void swap_list(listint_t *nodeA, listint_t *nodeB);
-void swap_array(int *array, size_t s, int a, int b);
+void swap_array(int *array, size_t size, int a, int b);
 
 #endif
