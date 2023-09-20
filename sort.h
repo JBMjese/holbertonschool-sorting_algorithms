@@ -24,4 +24,8 @@ void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
 void quick_sort_r(int *, size_t, int *, size_t);
 
+/* aux funtion*/
+
+void print_array(const int *array, size_t size);
+
 #endif
